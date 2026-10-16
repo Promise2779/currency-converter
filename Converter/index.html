@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTC & Currency Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Currency Converter</h1>
+    <p class="subtitle">Bitcoin, Naira, Dollar &amp; Euro</p>
+
+    <label for="amount">Amount</label>
+    <input type="number" id="amount" value="1" min="0" step="any" inputmode="decimal" />
+
+    <div class="row">
+      <div class="field">
+        <label for="from">From</label>
+        <select id="from">
+          <option value="BTC" selected>₿ Bitcoin (BTC)</option>
+          <option value="USD">$ US Dollar (USD)</option>
+          <option value="EUR">€ Euro (EUR)</option>
+          <option value="NGN">₦ Naira (NGN)</option>
+        </select>
+      </div>
+
+      <button id="swap" type="button" aria-label="Swap currencies" title="Swap">⇄</button>
+
+      <div class="field">
+        <label for="to">To</label>
+        <select id="to">
+          <option value="BTC">₿ Bitcoin (BTC)</option>
+          <option value="USD" selected>$ US Dollar (USD)</option>
+          <option value="EUR">€ Euro (EUR)</option>
+          <option value="NGN">₦ Naira (NGN)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="result" aria-live="polite">
+      <div id="result">—</div>
+      <div id="rate" class="rate"></div>
+    </div>
+
+    <div class="footer">
+      <span id="status">Loading rates…</span>
+      <button id="refresh" type="button">Refresh</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
